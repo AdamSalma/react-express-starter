@@ -4,8 +4,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var usersRouter = require('./routes/users');
-
 var app = express();
 
 // view engine setup
@@ -24,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
  * Routes
  */
 
-app.use('/api', usersRouter); // todo
+app.use('/api', require('./routes/api')); // todo
 
 // React entry point
 app.get('*', function(req, res, next) {

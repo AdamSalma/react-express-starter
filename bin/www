@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+// Allows debug logging to be emitted
+process.env.DEBUG = 'portfolio:*'
+
 /**
  * Module dependencies.
  */

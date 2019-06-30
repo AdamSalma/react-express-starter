@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "concurrently -k -n=server,app \"npm run server\" \"npm run app\"",
-    "server": "SET DEBUG=portfolio:* && node ./bin/www",
+    "server": "set DEBUG=portfolio:* && node ./bin/www",
     "app": "cd ./client && npm start",
     "postinstall": "echo \"Installing Frontend Dependencies...\n\" && cd ./client && npm install && cd .."
   },
